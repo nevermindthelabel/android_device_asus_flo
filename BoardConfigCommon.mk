@@ -33,9 +33,9 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000
 
 # Build kernel inline
 TARGET_KERNEL_SOURCE := kernel/asus/flo
-TARGET_KERNEL_CONFIG := flo_defconfig
-TARGET_VARIANT_CONFIG := flo_defconfig
-TARGET_SELINUX_CONFIG := flo_defconfig
+TARGET_KERNEL_CONFIG := krexus_flo_defconfig
+TARGET_VARIANT_CONFIG := krexus_flo_defconfig
+TARGET_SELINUX_CONFIG := krexus_flo_defconfig
 
 # Audio
 BOARD_USES_ALSA_AUDIO:= true
