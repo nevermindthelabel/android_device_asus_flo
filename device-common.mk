@@ -19,14 +19,6 @@
 #
 # Everything in this directory will become public
 
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-LOCAL_KERNEL := device/asus/flo-kernel/kernel
-else
-LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
-
-PRODUCT_COPY_FILES := \
-	$(LOCAL_KERNEL):kernel
 
 # This device is xhdpi.  However the platform doesn't
 # currently contain all of the bitmaps at xhdpi density so
@@ -294,6 +286,12 @@ PRODUCT_PACKAGES += \
     NfcNci \
     Tag
 
+# set default USB configuration
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    sys.usb.config=mtp,adb \
+    persist.sys.usb.config=mtp,adb \
+    ro.adb.secure=0
+    
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml \
