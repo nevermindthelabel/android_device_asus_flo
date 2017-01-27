@@ -412,3 +412,6 @@ on property:ro.boot.baseband=mdm
 on property:ro.boot.baseband=apq
     setprop ro.radio.noril yes
     stop ril-daemon
+
+on property:dev.bootcomplete=1
+    start mpdecision
