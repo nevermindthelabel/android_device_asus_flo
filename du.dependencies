@@ -1,0 +1,12 @@
+[
+  {
+    "repository":  "nevermindthelabel/android_kernel_asus_flo",
+    "target_path": "kernel/asus/flo",
+    "branch":      "master"
+ },
+ {
+   "repository":  "nevermindthelabel/android_vendor_asus",
+   "target_path": "vendor/asus",
+   "branch":      "master"
+ }
+]
